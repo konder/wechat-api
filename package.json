@@ -19,6 +19,7 @@
         "morgan": "^1.2.2",
         "multer": "^0.1.3",
         "underscore": "^1.7.0",
-        "wechat-enterprise": "^0.0.9"
+        "wechat-enterprise": "^0.0.9",
+        "node-schedule": "^0.1.15"
     }
 }
