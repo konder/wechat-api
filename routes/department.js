@@ -11,14 +11,14 @@ router.use(function timeLog(req, res, next) {
 });
 
 router.get('/', function (req, res) {
-    api.getDepartments(function (_error, _data) {
-        _error ? res.status(401).send(error) : res.send(_data.department);
+    api.getDepartments(function (error, data) {
+        error ? res.status(500).send(error) : res.send(data.department);
     });
 });
 
 router.get('/:departid', function (req, res) {
-    api.getDepartmentUsers(req.params.departid, 1, 0, function (_error, _data) {
-        _error ? res.status(401).send(error) : res.send(_data.userlist);
+    api.getDepartmentUsers(req.params.departid, 1, 0, function (error, data) {
+        error ? res.status(500).send(error) : res.send(data.userlist);
     });
 });
 

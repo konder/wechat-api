@@ -8,10 +8,10 @@ var api = new wechat.API(config.corpid, config.secret, config.agentid);
 router.post('/', function (req, res) {
     var body = req.body || {};
 
-    body.type || res.status(401).send({error: 'miss [type] field'});
+    body.type || res.status(500).send({error: 'miss [type] field'});
 
     var _errorHandle = function (error) {
-        res.status(401).send(error);
+        res.status(500).send(error);
     };
 
     var _successHandle = function (data) {

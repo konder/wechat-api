@@ -12,7 +12,7 @@ router.use(function timeLog(req, res, next) {
 
 router.get('/:id', function (req, res) {
     api.getUser(req.params.id, function (error, data) {
-        error ? res.status(401).send(error) : res.send(data);
+        error ? res.status(500).send(error) : res.send(data);
     });
 });
 
